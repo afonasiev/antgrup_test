@@ -1,0 +1,30 @@
+{
+  "name": "antgrup-html5-test",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter modern-vue-demo dev",
+    "dev:legacy": "pnpm --filter legacy-pixi-ie11 dev",
+    "build": "pnpm -r build",
+    "test": "pnpm --filter modern-vue-demo test",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "smoke": "node scripts/smoke-check.mjs",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm smoke",
+    "pages:prepare": "node scripts/prepare-pages.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.7.4",
+    "typescript-eslint": "^8.48.0"
+  }
+}

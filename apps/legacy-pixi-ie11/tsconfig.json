@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["DOM", "ES5", "ES2015.Promise"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": []
+  },
+  "include": ["src/**/*.ts"]
+}
